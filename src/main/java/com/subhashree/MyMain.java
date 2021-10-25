@@ -27,22 +27,22 @@ import com.subhashree.data.Root;
 //@Author Subhashree Sahu 
 
 public class MyMain {
-	private static final String FILE_NAME_REL = "C:\\Users\\soubhagyad1\\Downloads\\ProductDecision_Historical data.xlsx";
-	private static final String FILE_NAME_RESTI = "C:\\Users\\soubhagyad1\\Downloads\\Restriction Level.xlsx";
+	private static final String FILE_NAME_REL = "C:\\Users\\subhashree\\Downloads\\ProductDecision_Historical data.xlsx";
+	private static final String FILE_NAME_RESTI = "C:\\Users\\subhashree\\Downloads\\Restriction Level.xlsx";
 
-	private static final String FILE_NAME_JSON_REL1 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2016-01-1 to 2016-12-31.json";
-	private static final String FILE_NAME_JSON_REL2 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2017-01-1 to 2017-12-31.json";
-	private static final String FILE_NAME_JSON_REL3 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2018-01-1 to 2018-12-31.json";
-	private static final String FILE_NAME_JSON_REL4 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2019-01-1 to 2019-12-31.json";
-	private static final String FILE_NAME_JSON_REL5 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2020-01-1 to 2020-12-31.json";
-	private static final String FILE_NAME_JSON_REL6 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2021-01-1 to 2021-09-24.json";
+	private static final String FILE_NAME_JSON_REL1 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2016-01-1 to 2016-12-31.json";
+	private static final String FILE_NAME_JSON_REL2 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2017-01-1 to 2017-12-31.json";
+	private static final String FILE_NAME_JSON_REL3 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2018-01-1 to 2018-12-31.json";
+	private static final String FILE_NAME_JSON_REL4 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2019-01-1 to 2019-12-31.json";
+	private static final String FILE_NAME_JSON_REL5 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2020-01-1 to 2020-12-31.json";
+	private static final String FILE_NAME_JSON_REL6 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\ReleaseLevelPB Data\\2021-01-1 to 2021-09-24.json";
 	
-	private static final String FILE_NAME_JSON_RESTI1 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2016-01-1 to 2016-12-31.json";
-	private static final String FILE_NAME_JSON_RESTI2 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2017-01-1 to 2017-12-31.json";
-	private static final String FILE_NAME_JSON_RESTI3 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2018-01-1 to 2018-12-31.json";
-	private static final String FILE_NAME_JSON_RESTI4 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2019-01-1 to 2019-12-31.json";
-	private static final String FILE_NAME_JSON_RESTI5 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2020-01-1 to 2020-12-31.json";
-	private static final String FILE_NAME_JSON_RESTI6 = "C:\\Users\\soubhagyad1\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2021-01-1 to 2021-09-24.json";
+	private static final String FILE_NAME_JSON_RESTI1 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2016-01-1 to 2016-12-31.json";
+	private static final String FILE_NAME_JSON_RESTI2 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2017-01-1 to 2017-12-31.json";
+	private static final String FILE_NAME_JSON_RESTI3 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2018-01-1 to 2018-12-31.json";
+	private static final String FILE_NAME_JSON_RESTI4 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2019-01-1 to 2019-12-31.json";
+	private static final String FILE_NAME_JSON_RESTI5 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2020-01-1 to 2020-12-31.json";
+	private static final String FILE_NAME_JSON_RESTI6 = "C:\\Users\\subhashree\\Downloads\\PB DIL Data Data\\RestrictionLevel PB Data\\2021-01-1 to 2021-09-24.json";
 	
 //	private static final LocalDate start = LocalDate.parse("2018-01-01");
 //	private static final LocalDate end = LocalDate.parse("2019-12-31");
@@ -86,6 +86,9 @@ public class MyMain {
 		System.out.println("restrictions json: o:"+new TreeSet<String>(OrestrictionJsonProds).size());
 		System.out.println("restrictions xls: o:"+new TreeSet<String>(OrestrictionXlsProds).size());
 		
+		
+		
+		
 		newProductFoundInPB(restrictionJsonProds, restrictionXlsProds, OrestrictionXlsProds, "restrictions");
 		//newProductFoundInDIL(restrictionJsonProds, restrictionXlsProds, OrestrictionJsonProds, "restrictions");
 		
@@ -117,7 +120,7 @@ public class MyMain {
 			}
 		}
 		System.out.println("NewProductFoundInPB: finalList size:"+finalList.size());
-		generateXlsSingle(xlsFiltered, type+"_NewProductFoundInPB_trimed.xlsx");
+		generateXlsSingle(finalList, type+"_NewProductFoundInPB.xlsx");
 	}
 	
 	private static void newProductFoundInDIL(List<String> json, List<String> xls, List<String> originalJson,String type) {
@@ -139,7 +142,7 @@ public class MyMain {
 			}
 		}
 		System.out.println("NewProductFoundInDIL: finalList size:"+finalList.size());
-		generateXlsSingle(jsonFiltered, type+"_NewProductFoundInDIL_trimed.xlsx");
+		generateXlsSingle(finalList, type+"_NewProductFoundInDIL.xlsx");
 	}
 
 	private static DataDTO readJson() {
@@ -157,6 +160,8 @@ public class MyMain {
 					.collect(Collectors.toList());
 			List<String> relData11 = relroot1.getData().stream().map(obj -> obj.getIdentification().getGlobalProductIdentifier().getProductNumber())
 					.collect(Collectors.toList());
+			
+			
 			
 			Root relroot2 = objectMapper.readValue(new File(FILE_NAME_JSON_REL2), Root.class);
 			List<String> relData2 = relroot2.getData().stream().map(obj -> obj.getIdentification().getGlobalProductIdentifier().getProductNumber().replaceAll("\\s", ""))
@@ -285,10 +290,6 @@ public class MyMain {
 					histDatas.add(cell1.getStringCellValue().replaceAll("\\s", ""));
 					oriHistDatas.add(cell1.getStringCellValue());
 				}
-				else if (cell1.getCellTypeEnum() == CellType.NUMERIC) {
-					histDatas.add(String.valueOf(cell1.getNumericCellValue()));
-					System.out.println("added 1"); 
-				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -311,10 +312,6 @@ public class MyMain {
 						restDatas.add(cell1.getStringCellValue().replaceAll("\\s", ""));
 						OriRestDatas.add(cell1.getStringCellValue());
 					}
-					else if (cell1.getCellTypeEnum() == CellType.NUMERIC) {
-						restDatas.add(String.valueOf(cell1.getNumericCellValue()));
-						System.out.println("added");
-					}
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -329,19 +326,19 @@ public class MyMain {
 		return dataDTO;
 	}
 
-	private static void generateXlsSingle(Set<String> data, String fileName) {
+	private static void generateXlsSingle(List<String> data, String fileName) {
 		try {
 			XSSFWorkbook workbook = new XSSFWorkbook();
 
 			XSSFSheet sheet = workbook.createSheet("sheet1");// creating a blank sheet
 			int rownum = 0;
-			for (String user : data) {
+			for (String d : data) {
 				Row row = sheet.createRow(rownum++);
-				createListSingle(user, row);
+				createListSingle(d, row);
 
 			}
 
-			FileOutputStream out = new FileOutputStream(new File("C:\\Users\\soubhagyad1\\Downloads\\" + fileName)); // file
+			FileOutputStream out = new FileOutputStream(new File("C:\\Users\\subhashree\\Downloads\\" + fileName)); // file
 																														// name
 																														// with
 																														// path
